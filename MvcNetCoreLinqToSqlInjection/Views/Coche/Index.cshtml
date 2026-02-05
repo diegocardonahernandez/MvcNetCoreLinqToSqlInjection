@@ -1,0 +1,13 @@
+﻿@model ICoche
+
+<h1>@Model.Marca @Model.Modelo</h1>
+
+<img src="~/images/@Model.Imagen"width="50">
+
+<h2>Velocidad Actual: <span>@Model.Velocidad</span></h2>
+<h2>Velocidad Actual: <span>@Model.VelocidadMaxima</span></h2>
+
+<form method="post">
+    <button name="action" value="acelerar" class="btn btn-warning">Pisarle</button>
+    <button name="action" value="frenar" class="btn btn-danger">Frenar</button>
+</form>

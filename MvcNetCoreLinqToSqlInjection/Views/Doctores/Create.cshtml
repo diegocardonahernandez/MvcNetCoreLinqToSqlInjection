@@ -1,0 +1,52 @@
+﻿@model Doctor
+
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <div class="card shadow">
+                <div class="card-header bg-primary text-white">
+                    <h3 class="mb-0">
+                        <i class="bi bi-person-plus-fill me-2"></i>Crear Nuevo Doctor
+                    </h3>
+                </div>
+                <div class="card-body">
+                    <form asp-action="Create" method="post">
+                        <div class="mb-3">
+                            <label for="IdDoctor" class="form-label">ID Doctor</label>
+                            <input type="number" class="form-control" id="IdDoctor" name="IdDoctor" placeholder="Ingrese el ID del doctor">
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="Apellido" class="form-label">Apellido</label>
+                            <input type="text" class="form-control" id="Apellido" name="Apellido" placeholder="Ingrese el apellido">
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="Especialidad" class="form-label">Especialidad</label>
+                            <input type="text" class="form-control" id="Especialidad" name="Especialidad" placeholder="Ingrese la especialidad">
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="Salario" class="form-label">Salario</label>
+                            <input type="number" class="form-control" id="Salario" name="Salario" placeholder="Ingrese el salario">
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="IdHospital" class="form-label">ID Hospital</label>
+                            <input type="number" class="form-control" id="IdHospital" name="IdHospital" placeholder="Ingrese el ID del hospital">
+                        </div>
+
+                        <div class="d-grid gap-2 d-md-flex justify-content-md-end mt-4">
+                            <a asp-action="Index" class="btn btn-secondary me-md-2">
+                                <i class="bi bi-x-circle me-1"></i>Cancelar
+                            </a>
+                            <button type="submit" class="btn btn-primary">
+                                <i class="bi bi-check-circle me-1"></i>Guardar
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

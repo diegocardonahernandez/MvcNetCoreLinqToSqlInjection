@@ -1,0 +1,28 @@
+﻿@model List<Doctor>
+
+@if(Model != null)
+{
+    <h2 class="text-center p-2">DOCTORES SQL SERVER Y ORACLE DI</h2>
+
+    <table class="align-content-center table table-bordered table-hover table-danger">
+        <thead>
+            <th>ID</th>
+            <th>APELLIDO</th>
+            <th>ESPECIALIDAD</th>
+            <th>SALARIO</th>
+            <th>HOSPITAL</th>
+        </thead>
+            <tbody>
+            @foreach(Doctor doctor in Model)
+            {
+                <tr>
+                    <td>@doctor.IdDoctor</td>
+                    <td>@doctor.Apellido</td>
+                    <td>@doctor.Especialidad</td>
+                    <td>@doctor.Salario</td>
+                    <td>@doctor.IdHospital</td>
+                </tr>
+            }
+            </tbody>
+    </table>
+}
