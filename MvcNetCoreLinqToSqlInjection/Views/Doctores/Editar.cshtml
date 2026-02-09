@@ -1,0 +1,67 @@
+﻿@model Doctor
+
+<div class="container mt-5">
+    <div class="card shadow-sm">
+        <div class="card-header bg-dark text-white">
+            <h5 class="mb-0">Gestión de Plantilla</h5>
+        </div>
+
+        <div class="card-body">
+            <form method="post">
+
+                <div class="row mb-3">
+                    <div class="col-md-4">
+                        <label class="form-label">Código Hospital</label>
+                        <input type="number" class="form-control"
+                               name="IdHospital"
+                               value="@Model.IdHospital" />
+                    </div>
+
+                    <div class="col-md-4">
+                        <label class="form-label">Código Doctor</label>
+                        <input type="number" class="form-control"
+                               name="IdDoctor"
+                               value="@Model.IdDoctor" readonly />
+                    </div>
+
+                    <div class="col-md-4">
+                        <label class="form-label">Apellido</label>
+                        <input type="text" class="form-control"
+                               name="Apellido"
+                               value="@Model.Apellido"
+                                />
+                    </div>
+                </div>
+
+                <div class="mb-3">
+                    <label class="form-label">Especialidad</label>
+                    <input type="text" class="form-control"
+                           name="Especialidad"
+                           value="@Model.Especialidad"
+                           />
+                </div>
+
+                <div class="row mb-3">
+                    <div class="col-md-6">
+                        <label class="form-label">Salario</label>
+                        <input type="number" class="form-control"
+                               name="Salario"
+                               value="@Model.Salario"
+                                />
+                    </div>
+
+                </div>
+
+                <div class="d-flex justify-content-end gap-2">
+                    <a asp-action="Index" class="btn btn-outline-secondary">
+                        Cancelar
+                    </a>
+                    <button type="submit" class="btn btn-primary">
+                        Guardar
+                    </button>
+                </div>
+
+            </form>
+        </div>
+    </div>
+</div>

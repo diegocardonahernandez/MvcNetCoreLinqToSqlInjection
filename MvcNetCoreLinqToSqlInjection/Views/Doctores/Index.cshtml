@@ -11,6 +11,7 @@
             <th>ESPECIALIDAD</th>
             <th>SALARIO</th>
             <th>HOSPITAL</th>
+            <th>ACCIONES</th>
         </thead>
             <tbody>
             @foreach(Doctor doctor in Model)
@@ -21,6 +22,16 @@
                     <td>@doctor.Especialidad</td>
                     <td>@doctor.Salario</td>
                     <td>@doctor.IdHospital</td>
+                    <td>
+                        <a class="btn btn-outline-danger text-center" asp-controller="Doctores" asp-action="Eliminar" asp-route-id="@doctor.IdDoctor">
+                        Eliminar
+                          </a>
+                
+                        <a class="btn btn-outline-success text-center" asp-controller="Doctores" asp-action="Editar" asp-route-id="@doctor.IdDoctor">
+                            Editar
+                        </a>
+                    
+                </td>
                 </tr>
             }
             </tbody>

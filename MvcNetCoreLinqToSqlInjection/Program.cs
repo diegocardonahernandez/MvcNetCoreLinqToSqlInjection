@@ -15,7 +15,7 @@ car.VelocidadMaxima = 280;
 builder.Services.AddSingleton<ICoche, Coche>(x=>car);
 
 //Nota: Los repos suelen ir como Transient
-builder.Services.AddTransient<RepositoryDoctoresSQLServer>();
+builder.Services.AddTransient<IRepositoryDoctores,RepositoryDoctoresOracle>();
 
 //Resolvemos el servicio coche
 //builder.Services.AddTransient<Coche>();
